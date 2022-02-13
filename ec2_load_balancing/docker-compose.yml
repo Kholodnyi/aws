@@ -7,7 +7,6 @@ services:
       dockerfile: ./app/Dockerfile
     container_name: fastapi-web-app
     restart: unless-stopped
-    command: bash -c "uvicorn main:app --reload"
     volumes:
       - ./app/:/app:ro
     network_mode: "host"
